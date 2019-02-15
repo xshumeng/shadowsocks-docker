@@ -1,0 +1,11 @@
+version: '0.1.0'
+
+services:
+  shadowsocks:
+    image: shadowsocks
+    container_name: shadowsocks
+    restart: always
+    volumes:
+      - ./shadowsocks.conf:/etc/shadowsocks-libev/config.json
+    ports:
+      - "9090:8388"
